@@ -48,7 +48,7 @@ micronaut {
         annotations("com.example.*")
     }
     testResources {
-        sharedServer = true
+        sharedServer = false
     }
     aot {
         // Please review carefully the optimizations enabled below
