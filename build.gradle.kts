@@ -14,6 +14,12 @@ group = "com.example"
 val kotlinVersion=project.properties.get("kotlinVersion")
 repositories {
     mavenCentral()
+    maven {
+        url = uri("https://s01.oss.sonatype.org/content/repositories/snapshots/")
+        mavenContent {
+            snapshotsOnly()
+        }
+    }
 }
 
 dependencies {
@@ -49,6 +55,7 @@ micronaut {
     }
     testResources {
         sharedServer = false
+        version = "2.7.1-SNAPSHOT"
     }
     aot {
         // Please review carefully the optimizations enabled below
