@@ -1,6 +1,9 @@
 package com.example
 
-import io.micronaut.runtime.Micronaut.run
+import io.micronaut.runtime.Micronaut
+
 fun main(args: Array<String>) {
-	run(*args)
+    Micronaut.build(*args)
+        .eagerInitSingletons(true)
+        .start()
 }
